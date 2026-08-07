@@ -30,7 +30,7 @@ async function convertirLista() {
                 }
             }
         }
-
+        const reglasFinales = rules.slice(0, 5000);
         fs.writeFileSync('community_rules.json', JSON.stringify(rules, null, 2));
         console.log(`¡Listo! Se generaron ${rules.length} reglas.`);
     } catch (error) {
